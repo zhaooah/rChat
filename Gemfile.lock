@@ -153,6 +153,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  faye
   faye-rails (~> 2.0.0)
   haml-rails
   jbuilder (~> 2.0)

@@ -27,6 +27,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 
+#Faye
+gem 'faye'
+
 #Faye Rails
 gem 'faye-rails', '~> 2.0.0'
 
