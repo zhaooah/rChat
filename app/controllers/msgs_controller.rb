@@ -15,6 +15,8 @@ class MsgsController < ApplicationController
   # GET /msgs/new
   def new
     @msg = Msg.new
+   # @msgs = Msg.all
+
   end
 
   # GET /msgs/1/edit
@@ -24,17 +26,21 @@ class MsgsController < ApplicationController
   # POST /msgs
   # POST /msgs.json
   def create
-    @msg = Msg.new(msg_params)
+    @msg = Msg.create(msg_params)
 
-    respond_to do |format|
-      if @msg.save
-        format.html { redirect_to @msg, notice: 'Msg was successfully created.' }
-        format.json { render :show, status: :created, location: @msg }
-      else
-        format.html { render :new }
-        format.json { render json: @msg.errors, status: :unprocessable_entity }
-      end
+    unless contact_params.nil?        
+      @msg.save
     end
+
+  #  respond_to do |format|
+   #   if @msg.save
+    #    format.html { redirect_to @msg, notice: 'Msg was successfully created.' }
+     #   format.json { render :show, status: :created, location: @msg }
+     # else
+      #  format.html { render :new }
+       # format.json { render json: @msg.errors, status: :unprocessable_entity }
+      #end
+    #end
   end
 
   # PATCH/PUT /msgs/1
