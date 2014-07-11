@@ -36,8 +36,6 @@ gem 'faye-rails', '~> 2.0.0'
 #Thin Server
 gem 'thin'
 
-#Haml generators 
-gem 'haml-rails'
 
 
 
